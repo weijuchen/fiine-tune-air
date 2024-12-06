@@ -1,14 +1,14 @@
 from openai import OpenAI
 import streamlit as st
 # Config Parse
-from configparser import ConfigParser
-config = ConfigParser()
-config.read("config.ini")
+# from configparser import ConfigParser
+# config = ConfigParser()
+# config.read("config.ini")
 
-key = config["OPEN_AI"]["API_KEY"]
+# key = config["OPEN_AI"]["API_KEY"]
 # key = st.secrets["openai"]["OPENAI_API_KEY"]
 # api_key = st.secrets["GOOGLE_API_KEY"] 
-# key=st.secrets["OPENAI_API_KEY"]
+key=st.secrets["OPENAI_API_KEY"]
 def air_conditioner_recommendation(user_request):
     client = OpenAI(api_key=key)
 
